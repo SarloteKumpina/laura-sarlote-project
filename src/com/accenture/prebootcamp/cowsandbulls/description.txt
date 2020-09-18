@@ -1,57 +1,35 @@
-description
+Description
+
 Create a game:
-Create class "MyList". Add property "list" which is of type array with text elements.
-   1. Create default constructor which initializes "list" to a new empty array of size 3.
-   2. Create another constructor which has one parameter "size" (whole number) and
-      use this variable to create new empty array of that size and assign it to "list"
-   3. Make sure property "list" is not accessible directly from other class (it has to be encapsulated).
-   4. Create method "add" for adding element to the list. (this method should be accessible publicly)
-   5. Create method "printList" which outputs the list. (only accessible on package level)
-   6. Create class "ListProgram" which:
-        1. Creates a new instance of "MyList" with default constructor
-        2. Add two elements to your list (any values)
-        3. Output all of the values in your list
-        4. Create another list. This time specify size 5.
-        5. Add 4 elements to this list
-        6. Output all of the values in your list
 
-Add more functionality to your previous program. For example, make it possible for user to:
-     1. Add item to the list
-     2. view the list
-     3. Remove item from list
-     4. Edit any item in the list
-          edit 3 buy milk and eggs
+Create class UsersGuess, add property numbers which is of type array with whole numbers.
+Create default constructor which initializes "numbers" to a new empty array of size 4.
+Make sure property "numbers" is not accessible directly from other class (it has to be encapsulated).
+Create method "createArray" for adding elements to the numbers (this method should be encapsulated).
+Create method "showResult" for showing to the user how many Cow and Bull guesses are correct (this method should be encapsulated).
 
-     You can implement the following commands:
-        (note: for all examples below, let's assume we already have two items in our list:
-                1 Buy milk
-                2 Go to the gym)
 
-        1) printList - command has no arguments, it just prints the list to the user.
-                Example input:
-                printList
+Create class "CowsAndBullsGame". Inside this class generate 4 separate whole random numbers from 0-9 (encapsulate them as private).
+Make sure that each of the 4 numbers are different.
+Put these 4 numbers in array.
+Creates a new instance of "UsersGuess" with default constructor.
+By using scanner, ask user to input 4 whole different numbers.
+Check if the input is valid, if not return "Not valid input, please try again."
+By using method "createArray" put these 4 numbers in array.
+Compare users arrays each position to the random array (using for loop) - counting Bulls.
+Compare if users numbers are in any other position in the random array (using for into for loop) - counting Cows.M
+Make sure that user has 10 guesses and inform user how many guesses are left.
+Make sure that when users guess is correct, the program congratulates the user and exit.
+If the user uses all guesses and did not guess the correct number, the output should be as follows: "0 - Bulls, 2 - Cows (0 guesses left). Sorry, you lost!"
 
-            Example output:
-                1 Buy milk
-                2 Go to the gym
+1)
+Example input: "Please enter 4 digit number: ":
+                1234
+Example output:
+                1 - Bulls, 2 - Cows (9 guesses left).
 
-        2) add [TEXT] - command adds new item at the end of the list and prints the list.
-            Example input:
-                add Mow the lawn
-            Example output:
-                1 Buy milk
-                2 Go to the gym
-                3 Mow the lawn
-
-        3) remove [INDEX] - removes element from list and prints the list.
-            Example input:
-                remove 2
-            Example output:
-                1 Buy milk
-
-        4) edit [INDEX] [TEXT] - modifies element in the list and prints the list.
-            Example input:
-                edit 1 Buy milk and eggs!
-            Example output:
-                1 Buy milk and eggs!
-                2 Go to the gym
+2)
+Example input: "Please enter 4 digit number: ":
+                a123
+Example output:
+                "Not valid input, please try again."
