@@ -1,82 +1,57 @@
 description
 Create a game:
-       1. Create a class "CowsAndBulls" and:
-           a. Add properties (should be encapsulated as private):
-               "cows" (whole number)
-               "bulls" (whole number)
-           b. Add getter methods for all of the properties in "CowsAndBulls" class
+Create class "MyList". Add property "list" which is of type array with text elements.
+   1. Create default constructor which initializes "list" to a new empty array of size 3.
+   2. Create another constructor which has one parameter "size" (whole number) and
+      use this variable to create new empty array of that size and assign it to "list"
+   3. Make sure property "list" is not accessible directly from other class (it has to be encapsulated).
+   4. Create method "add" for adding element to the list. (this method should be accessible publicly)
+   5. Create method "printList" which outputs the list. (only accessible on package level)
+   6. Create class "ListProgram" which:
+        1. Creates a new instance of "MyList" with default constructor
+        2. Add two elements to your list (any values)
+        3. Output all of the values in your list
+        4. Create another list. This time specify size 5.
+        5. Add 4 elements to this list
+        6. Output all of the values in your list
 
-           **************** should edit
-           c. Add default constructor which initializes properties with default values
-               (default power should be 5 and name - "Axe")
-           d. Add constructor with parameters "power" and "name" for setting properties of the weapon
-              (this constructor should validate power value and shouldn't allow to set it less than 1
-               or higher than 10. It should also validate name. If name has less than 4 characters or
-               more than 20, it should be set to default ("Axe"))
-       2. Create a class "Player" and:
-           a. add property "name" (of type text)
-           b. add property "weapon" (of type Weapon)
-           c. add property "health" (whole number)
-           e. add constructor which has two parameters for setting name and Weapon. Also in this
-              constructor you should set health to 1000
-           f. add getter method for "name" and "health" properties
-           g. add method "isAlive" which returns true if user has health greater than 0, or false
-              player's health is 0 or less. Access should be private.
-           h. create a method "subtractHealth" with parameter "points" (whole number).
-               This method subtracts points from players health property and outputs message:
-                   "[name] lost [numberOfPoints] points and now has [health]] left."
-               But, if points is greater than player's health it sets players health to zero and prints this
-               message instead: "[name] just lost all points and died!".
-               If this player is already dead already (has 0 or less health), then we don't need to subtract
-               any points or output any message.
-           i. add "attack" method with one parameter of type "Player" (this is the victim). This method
-              is used so our player (the object on which we call the method) can attack another player
-              (victim/the object which is the parameter).
-              First, before we attack victim, we need to check if we are alive (if our player is alive).
-              If our player is dead, then we just output message:
-                       "[name] is unable to attack, because he/she is dead."
-              and return from method without attacking victim. But if we are alive, we have to
-              take the power of our weapon and subtract it from the victims health (so we basically
-              call "subtractHealth" method on our victim) and before that print message:
-                   "[attackerName] is attacking [victimName] with [weapon.name]"
+Add more functionality to your previous program. For example, make it possible for user to:
+     1. Add item to the list
+     2. view the list
+     3. Remove item from list
+     4. Edit any item in the list
+          edit 3 buy milk and eggs
 
-       3 . Create class "Game" with main method. In this main method we will create (instantiate)
-           our objects and use them to battle (attack each other).
-             a. create two weapons (choose power and name as you wish)
-             b. Create two players with the previously created weapons
-             c. Implement a method "battle" which makes the players attack each other 30 times. Method has
-                two parameters (both are of type Player). To make players attack each other, use previously
-                created "attack" method for attacking. Example of players attacking each other:
-                     player1.attack(player2); //player1 is attacking player2 (both variables are of type Player)
-                     player2.attack(player1); //player2 is attacking player2 (both variables are of type Player)
-             d. call the "battle" method in main method and pass to it the players you previously created.
-             e. implement a method "determineWinner" which has two parameters (both are of type Player).
-                The purpose  of this method is to print out who won the battle (to determine that
-                 you need to compare the health points of both players) and who has how many points.
-                example of message:
-                       "John won Jane by 140 points." (so in this case John had 140 points more than Jane
-                            after all of the battles)
+     You can implement the following commands:
+        (note: for all examples below, let's assume we already have two items in our list:
+                1 Buy milk
+                2 Go to the gym)
 
+        1) printList - command has no arguments, it just prints the list to the user.
+                Example input:
+                printList
 
-       //Example code in main method:
-           Player john = new Player("John", new Weapon("Axe", 10));
-           Player jane = new Player("Jane", new Weapon("Sword", 3));
+            Example output:
+                1 Buy milk
+                2 Go to the gym
 
-           battle(john, jane);
+        2) add [TEXT] - command adds new item at the end of the list and prints the list.
+            Example input:
+                add Mow the lawn
+            Example output:
+                1 Buy milk
+                2 Go to the gym
+                3 Mow the lawn
 
-           determineWinner(john, jane);
+        3) remove [INDEX] - removes element from list and prints the list.
+            Example input:
+                remove 2
+            Example output:
+                1 Buy milk
 
-       //Here is how the output should look like:
-               John is attacking Jane with Axe
-               Jane lost 10 points and now has 990 left.
-               Jane is attacking John with Sword
-               John lost 3 points and now has 997 left.
-               John is attacking Jane with Axe
-               Jane lost 10 points and now has 980 left.
-               ...
-               Jane lost 10 points and now has 800 left.
-               Jane is attacking John with Sword
-               John lost 3 points and now has 940 left.
-               John won Jane by 140 points.
-
-       //try to change the number of battles and execute the program and see how it behaves.
+        4) edit [INDEX] [TEXT] - modifies element in the list and prints the list.
+            Example input:
+                edit 1 Buy milk and eggs!
+            Example output:
+                1 Buy milk and eggs!
+                2 Go to the gym
