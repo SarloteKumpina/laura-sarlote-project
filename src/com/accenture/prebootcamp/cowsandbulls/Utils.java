@@ -8,7 +8,7 @@ public class Utils {
 
         Random random = new Random();
         int[] myArray = new int[4];
-        String memory = "0";
+        String memory = "";
 
         for (int i = 0; i < 4; i++) {
             int number = random.nextInt(9);

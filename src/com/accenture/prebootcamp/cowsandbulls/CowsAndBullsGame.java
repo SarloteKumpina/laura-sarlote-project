@@ -1,22 +1,41 @@
 package com.accenture.prebootcamp.cowsandbulls;
 
-public class CowsAndBullsGame {
-/*
-BURN AFTER READING
+import java.util.Scanner;
 
-*Klau, es te nedaudz paštukoju par to, kā būvēt sākumu un mans piedāvājums ir šāds.
-Varēsim izrunāt lekcijas laikā, ja kaut kas ir nesaprotams... Protams, varam mainīt, ja vēlies savādāk!
-*Nomainīju nosaukumu no "UserGuess" uz "Utils", jo tajā klasē principā glabāsies visas metodes utt utt
-*Un vēl viena lieta - man šķiet, ka tur vajag tomēr ciparus ģenerēt no 1-9, ne 0-9. Tāpēc piedāvāju ģenerētos
-ciparus salīdzināt ar String, kurā ir jau ielikta arī tā nulle (tas tā, lai, ja random uzģenerē 0, tad
-ģenerē citu skaitli).. Pagaidām atstāju "public" un uzrakstīju to "for" ciklu drukāšanai, lai redzētu, kā strādā ģenerators.
- */
+public class CowsAndBullsGame {
 
     public static void main(String[] args) {
         int[] randomNumber = Utils.generateNumber();
 
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.print("Please enter 4 different digits from 0 to 9 (for example 1 3 4 8): ");
+        String userString = userInput.nextLine();
+
+
+        String numbersOnly = userString.replaceAll("[^0-9]", "");
+        // String numbersOnly = userString.trim();
+        System.out.println("Your guess: " + numbersOnly);
+
+        //String[] usersArray = numbersOnly.split("");
+        //for (int i = 0; i< usersArray.length; i++){
+        //    System.out.print(usersArray[i] + " ");
+       // }
+
+        int[] userNumber = new int[4];
+        for (int i = 0; i < numbersOnly.length(); i++) {
+            userNumber[i] = Integer.parseInt(numbersOnly.substring(i, i + 1));
+        }
+
+
+
+        System.out.println();
+
+
         for (int i = 0; i < randomNumber.length; i++) {
             System.out.print(randomNumber[i] + " ");
         }
+
+
     }
 }
