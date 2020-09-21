@@ -20,4 +20,26 @@ public class Utils {
         }
         return myArray;
     }
+
+    public static int countBulls(int[] userNumber, int[] randomNumber) {
+        int bullsCount = 0;
+        for (int i = 0; i < userNumber.length; ++i) {
+            if (randomNumber[i] == userNumber[i]) {
+                bullsCount += 1;
+            }
+        }
+        return bullsCount;
+    }
+
+    public static int countCows(int[] userNumber, int[] randomNumber) {
+        int cowsCount = 0;
+        for (int i = 0; i < userNumber.length; ++i) {
+            for (int j = 0; j < randomNumber.length; ++j) {
+                if (userNumber[i] == randomNumber[j] && i != j) {
+                    cowsCount += 1;
+                }
+            }
+        }
+        return cowsCount;
+    }
 }
