@@ -2,17 +2,17 @@ Description
 
 Create a game:
 
-Create class UsersGuess, add property numbers which is of type array with whole numbers.
+Create class Utils, add property numbers which is of type array with whole numbers.
 Create default constructor which initializes "numbers" to a new empty array of size 4.
 Make sure property "numbers" is not accessible directly from other class (it has to be encapsulated).
 Create method "createArray" for adding elements to the numbers (this method should be encapsulated).
 Create method "showResult" for showing to the user how many Cow and Bull guesses are correct (this method should be encapsulated).
 
 
-Create class "CowsAndBullsGame". Inside this class generate 4 separate whole random numbers from 0-9 (encapsulate them as private).
+Create class "CowsAndBullsGame". Inside this class generate 4 separate whole random numbers from 1-9 (encapsulate them as private).
 Make sure that each of the 4 numbers are different.
 Put these 4 numbers in array.
-Creates a new instance of "UsersGuess" with default constructor.
+Creates a new instance of "Utils" with default constructor.
 By using scanner, ask user to input 4 whole different numbers.
 Check if the input is valid, if not return "Not valid input, please try again."
 By using method "createArray" put these 4 numbers in array.
