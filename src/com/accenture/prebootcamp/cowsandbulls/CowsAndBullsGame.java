@@ -65,9 +65,7 @@ public class CowsAndBullsGame {
         } while (bullsCount < 5);
 
 
-
-
-        }
-
-
     }
+
+
+}
