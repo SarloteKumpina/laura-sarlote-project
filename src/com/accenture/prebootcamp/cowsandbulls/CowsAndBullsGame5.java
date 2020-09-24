@@ -5,17 +5,14 @@ import java.util.Scanner;
 public class CowsAndBullsGame5 {
 
     public static void main(String[] args) {
-        int[] randomNumber = Utils.generateNumber();
+
         Scanner userInput = new Scanner(System.in);
         String numbersOnly;
         int userGuessCount = 10;
         int bullsCount = 0;
         String playAgain;
 
-        for (int i = 0; i < randomNumber.length; i++) {
-            System.out.print(randomNumber[i] + " ");
-        }
-        System.out.println("");
+
 
         System.out.println("Game \"Cows & bulls\"\n\n" +
                 "Try to guess 4 different digit number.\n" +
@@ -26,6 +23,11 @@ public class CowsAndBullsGame5 {
                 "You have 10 guesses! Good luck! :)\n");
 
         do {
+            int[] randomNumber = Utils.generateNumber();
+            for (int i = 0; i < randomNumber.length; i++) {
+                System.out.print(randomNumber[i] + " ");
+            }
+            System.out.println("");
             do {
                 do {
                     System.out.print("+------------+-------+------+---------------+\n" +
@@ -54,9 +56,14 @@ public class CowsAndBullsGame5 {
                 if (bullsCount != 4) {
                     System.out.print(userGuessCount + "       |\n" +
                             "+------------+-------+------+---------------+\n\n");
+
                 }
 
+
             } while (bullsCount != 4 && userGuessCount != 0);
+            if (userGuessCount == 0){
+                userGuessCount = 10;
+            }
 
             if (bullsCount == 4) {
                 System.out.println("        |\n+------------+-------+------+---------------+\n\nYou won! " +
@@ -68,6 +75,7 @@ public class CowsAndBullsGame5 {
 
             playAgain = userInput.nextLine();
             playAgain.toLowerCase();
+//            if (userInput.nextLine().equals(playAgain.toLowerCase();))
 
         } while (playAgain.toLowerCase().equals("yes"));
     }
