@@ -72,7 +72,11 @@ public class CowsAndBullsGame7 {
             }
 
             playAgain = userInput.nextLine();
-            playAgain.toLowerCase();
+
+            while (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no")) {
+                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
+                playAgain = userInput.nextLine();
+            }
 
         } while (playAgain.toLowerCase().equals("yes"));
 
