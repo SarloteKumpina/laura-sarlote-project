@@ -62,7 +62,7 @@ public class CowsAndBullsGame5 {
 
             } while (bullsCount != 4 && userGuessCount != 0);
 
-            if (userGuessCount == 0){
+            if (userGuessCount == 0) {
                 userGuessCount = 10;
             }
 
@@ -75,8 +75,13 @@ public class CowsAndBullsGame5 {
             }
 
             playAgain = userInput.nextLine();
-            playAgain.toLowerCase();
-//            if (userInput.nextLine().equals(playAgain.toLowerCase();))
+
+            if (!playAgain.toLowerCase().equals("yes") || !playAgain.toLowerCase().equals("no")) {
+            System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
+                playAgain = userInput.nextLine();
+                return;
+        }
+
 
         } while (playAgain.toLowerCase().equals("yes"));
     }
