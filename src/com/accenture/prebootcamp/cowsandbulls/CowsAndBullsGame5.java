@@ -61,6 +61,7 @@ public class CowsAndBullsGame5 {
 
 
             } while (bullsCount != 4 && userGuessCount != 0);
+
             if (userGuessCount == 0){
                 userGuessCount = 10;
             }
