@@ -13,7 +13,6 @@ public class CowsAndBullsGame5 {
         String playAgain;
 
 
-
         System.out.println("Game \"Cows & bulls\"\n\n" +
                 "Try to guess 4 different digit number.\n" +
                 "Start the game by entering 4 digits from 0 to 9.\n" +
@@ -77,10 +76,9 @@ public class CowsAndBullsGame5 {
             playAgain = userInput.nextLine();
 
             if (!playAgain.toLowerCase().equals("yes") || !playAgain.toLowerCase().equals("no")) {
-            System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
+                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
                 playAgain = userInput.nextLine();
-                return;
-        }
+            }
 
 
         } while (playAgain.toLowerCase().equals("yes"));
