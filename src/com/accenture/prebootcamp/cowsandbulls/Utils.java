@@ -48,7 +48,7 @@ public class Utils {
                 "| Your guess | Bulls | Cows | Attempts left |\n" +
                 "+------------+-------+------+---------------+\n");
 
-        for (int i = 0; i < table.length; i++) {
+        for (int i = 0; i < table.length; i++) { //took off =
             if (table[i][0] == null) {
                 return;
             }
