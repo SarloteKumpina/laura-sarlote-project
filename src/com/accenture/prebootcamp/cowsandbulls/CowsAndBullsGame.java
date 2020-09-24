@@ -5,67 +5,81 @@ import java.util.Scanner;
 public class CowsAndBullsGame {
 
     public static void main(String[] args) {
-        int[] randomNumber = Utils.generateNumber();
-
-        for (int i = 0; i < randomNumber.length; i++) {
-            System.out.print(randomNumber[i] + " ");
-
-        }
-        System.out.println("\n×******");
-
-//        boolean isGuessCorrect = false;
-        int bullsCount = 0;
-        int cowsCount = 0;
-
         Scanner userInput = new Scanner(System.in);
+        String numbersOnly;
+        int userGuessCount = 10;
+        int bullsCount;
+        int cowsCount;
+        String playAgain;
+        String[][] table;
+
+        System.out.println();
+        System.out.println("Game \"Cows & bulls\"\n\n" +
+                "Try to guess 4 different digit number.\n" +
+                "Start the game by entering 4 digits from 0 to 9.\n" +
+                "If some of your digits will be in the right place, you will get Bulls\n" +
+                "If some of your digits will be in the secret number, but not in the right " +
+                "place, you will get Cows\n" +
+                "You have 10 guesses! Good luck! :)");
 
         do {
-            System.out.print("Please enter 4 different digits from 0 to 9 (for example 1 3 4 8): ");
-            String userString = userInput.nextLine();
-
-//        String numbersOnly = userString.replaceAll("[^0-9]", "");
-            String numbersOnly = userString.trim();
-            System.out.println("Your guess: " + numbersOnly);
-
-//        String[] usersArray = numbersOnly.split("");
-//        for (int i = 0; i< usersArray.length; i++){
-//            System.out.print(usersArray[i] + " ");
-//         }
-
-            int[] userNumber = new int[4];
-            for (int i = 0; i < numbersOnly.length(); i++) {
-                userNumber[i] = Integer.parseInt(numbersOnly.substring(i, i + 1));
+            int[] randomNumber = Utils.generateNumber();
+            System.out.println();
+            for (int i = 0; i < randomNumber.length; i++) {
+                System.out.print(randomNumber[i] + " ");
             }
+            table = new String[userGuessCount][4];
+            do {
+                do {
+                    System.out.println();
+                    System.out.print("Your guess: ");
+                    String userString = userInput.nextLine();
 
-            for (int i = 0; i < userNumber.length; ++i) {
-//            System.out.println("Outer loop iteration " + i);
-                for (int j = 0; j < randomNumber.length; ++j) {
-                    if (userNumber[i] == randomNumber[j]) {
-                        cowsCount += 1;
-
+                    numbersOnly = userString.replaceAll("[^0-9]", "");
+                    if (numbersOnly.length() != 4) {
+                        System.out.println("Incorrect input. Please enter 4 digits!");
                     }
-                    //System.out.println("usersNumber[0] = " + userNumber[i] + "; randomNumber[j] = " + randomNumber[j] + " AND cows count is - " + cowsCount);
+                } while (numbersOnly.length() != 4);
+
+                int[] userNumber = new int[4];
+                for (int i = 0; i < numbersOnly.length(); i++) {
+                    userNumber[i] = Integer.parseInt(numbersOnly.substring(i, i + 1));
                 }
+
+                bullsCount = Utils.countBulls(userNumber, randomNumber);
+                cowsCount = Utils.countCows(userNumber, randomNumber);
+
+                table[10 - userGuessCount][0] = numbersOnly;
+                table[10 - userGuessCount][1] = Integer.toString(bullsCount);
+                table[10 - userGuessCount][2] = Integer.toString(cowsCount);
+                table[10 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
+
+                userGuessCount--;
+                Utils.printTable(table);
+
+            } while (bullsCount != 4 && userGuessCount != 0);
+
+            if (userGuessCount == 0) {
+                userGuessCount = 10;
             }
 
-            for (int i = 0; i < userNumber.length; i++) {
-                if (randomNumber[i] == userNumber[i]) {
-                    //isGuessCorrect = true;
-                    bullsCount += 1;
-                }
+            if (bullsCount == 4) {
+                System.out.println("You won! Congratulations! \nDo you want to play again? " +
+                        "\nPlease answer by entering - \"yes\" or \"no\"!");
+            } else {
+                System.out.println("\nSorry you lost! Good luck next time! \nDo you want to play again? " +
+                        "\nPlease answer by entering - \"yes\" or \"no\"!");
             }
 
-//            if (!isGuessCorrect) {
-//                //System.out.println("Not correct, try again! You have 9 attempts left.");
-//            }
-            System.out.print("Bulls - " + bullsCount + " Cows - " + cowsCount);
-            System.out.println("\n×******");
+            playAgain = userInput.nextLine();
 
+            while (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no")) {
+                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
+                playAgain = userInput.nextLine();
+            }
 
-        } while (bullsCount < 5);
+        } while (playAgain.toLowerCase().equals("yes"));
 
-
+        userInput.close();
     }
-
-
 }
