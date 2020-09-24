@@ -67,10 +67,10 @@ public class CowsAndBullsGame6a {
                     rows.add(row);
 
                     for(int i=0; i< rows.size(); i++){
-                        System.out.print(rows.get(i).get(0) + " ");
-                        System.out.print(rows.get(i).get(1) + " ");
-                        System.out.print(rows.get(i).get(2) + " ");
-                        System.out.print(rows.get(i).get(3) + " ");
+                        System.out.print(" " + rows.get(i).get(0) + " ");
+                        System.out.print(" " + rows.get(i).get(1) + " ");
+                        System.out.print(" " + rows.get(i).get(2) + " ");
+                        System.out.print(" " + rows.get(i).get(3) + " ");
 
                         System.out.println();
                     }
