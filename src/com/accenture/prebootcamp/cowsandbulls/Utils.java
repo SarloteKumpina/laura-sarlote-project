@@ -42,4 +42,21 @@ public class Utils {
         }
         return cowsCount;
     }
+
+    public static void printTable(String[][] table) {
+        System.out.print("+------------+-------+------+---------------+\n" +
+                "| Your guess | Bulls | Cows | Attempts left |\n" +
+                "+------------+-------+------+---------------+\n");
+
+        for (int i = 0; i <= table.length; i++) {
+            if (table[i][0] == null) {
+                return;
+            }
+            System.out.print("|    " + table[i][0] + "    " +
+                    "|   " + table[i][1] + "   |  " +
+                    table[i][2] + "   |       " +
+                    table[i][3] + "       |\n" +
+                    "+------------+-------+------+---------------+\n");
+        }
+    }
 }
