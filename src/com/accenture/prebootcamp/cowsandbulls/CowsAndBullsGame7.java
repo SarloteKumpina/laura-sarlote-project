@@ -51,10 +51,10 @@ public class CowsAndBullsGame7 {
                 cowsCount = Utils.countCows(userNumber, randomNumber);
 
 
-                table[10-userGuessCount][0]=numbersOnly;
-                table[10-userGuessCount][1]=Integer.toString(bullsCount);
-                table[10-userGuessCount][2]=Integer.toString(cowsCount);
-                table[10-userGuessCount][3]=Integer.toString(userGuessCount-1);
+                table[10 - userGuessCount][0] = numbersOnly;
+                table[10 - userGuessCount][1] = Integer.toString(bullsCount);
+                table[10 - userGuessCount][2] = Integer.toString(cowsCount);
+                table[10 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
 
                 userGuessCount--;
                 Utils.printTable(table);
