@@ -13,13 +13,14 @@ public class CowsAndBullsGame {
         String playAgain;
         String[][] table;
 
+
         System.out.println();
         System.out.println("Game \"Cows & bulls\"\n\n" +
-                "Try to guess 4 different digit number.\n" +
+                "Try to guess 4 different digit number (secret number).\n" +
                 "Start the game by entering 4 digits from 0 to 9.\n" +
-                "If some of your digits will be in the right place, you will get Bulls\n" +
+                "If some of your digits will be in the right place of the secret number, you will get Bulls.\n" +
                 "If some of your digits will be in the secret number, but not in the right " +
-                "place, you will get Cows\n" +
+                "place, you will get Cows.\n" +
                 "You have 10 guesses! Good luck! :)");
 
         do {
@@ -59,16 +60,14 @@ public class CowsAndBullsGame {
 
             } while (bullsCount != 4 && userGuessCount != 0);
 
-            if (userGuessCount == 0) {
-                userGuessCount = 10;
-            }
-
             if (bullsCount == 4) {
                 System.out.println("You won! Congratulations! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
+                userGuessCount = 10;
             } else {
                 System.out.println("\nSorry you lost! Good luck next time! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
+                userGuessCount = 10;
             }
 
             playAgain = userInput.nextLine();

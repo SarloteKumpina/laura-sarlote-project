@@ -1,35 +1,73 @@
-Description
+Description.
 
-Create a game:
+Create a game "Cows and bulls":
 
-Create class Utils, add property numbers which is of type array with whole numbers.
-Create default constructor which initializes "numbers" to a new empty array of size 4.
-Make sure property "numbers" is not accessible directly from other class (it has to be encapsulated).
-Create method "createArray" for adding elements to the numbers (this method should be encapsulated).
-Create method "showResult" for showing to the user how many Cow and Bull guesses are correct (this method should be encapsulated).
+1) Create a class "Utils" and:
+a) create a method "generateNumber" which generates random number with 4 digits where each digit is different.
+The method must return int array ;
+b) create a method "countBulls" which counts all digits that are placed in the right place in the random number at each guess;
+The method must return int;
+c) create a method "countCows" which counts all digits that are somewhere in the random number, but are not in the right place;
+The method must return int;
+d) create a method "printTable" which prints new table after every valid input guess including all the previous guesses.
+The method should print following (this is just an example for users input and expected outcome for Bulls and Cows count):
 
++------------+-------+------+---------------+
+| Your guess | Bulls | Cows | Attempts left |
++------------+-------+------+---------------+
+|    1234    |   0   |  3   |       9       |
++------------+-------+------+---------------+
+|    5678    |   0   |  1   |       8       |
++------------+-------+------+---------------+
 
-Create class "CowsAndBullsGame". Inside this class generate 4 separate whole random numbers from 1-9 (encapsulate them as private).
-Make sure that each of the 4 numbers are different.
-Put these 4 numbers in array.
-Creates a new instance of "Utils" with default constructor.
-By using scanner, ask user to input 4 whole different numbers.
-Check if the input is valid, if not return "Not valid input, please try again."
-By using method "createArray" put these 4 numbers in array.
-Compare users arrays each position to the random array (using for loop) - counting Bulls.
-Compare if users numbers are in any other position in the random array (using for into for loop) - counting Cows.M
-Make sure that user has 10 guesses and inform user how many guesses are left.
-Make sure that when users guess is correct, the program congratulates the user and exit.
-If the user uses all guesses and did not guess the correct number, the output should be as follows: "0 - Bulls, 2 - Cows (0 guesses left). Sorry, you lost!"
+2) Create a class "CowsAndBullsGame" with main method for creating the game and:
+a) import Scanner for users input;
+b) create a variable "numbersOnly" with datatype String;
+c) create a variable "userGuessCount" with datatype int and assign value - 10 to it;
+d) create a variable "bullsCount" with datatype int;
+e) create a variable "cowsCount" with datatype int;
+f) create a variable "playAgain" with datatype String;
+g) create two dimensional array variable "table" with datatype String;
+h) print a text for beginning of the game as follows:
 
-1)
-Example input: "Please enter 4 digit number: ":
-                1234
-Example output:
-                1 - Bulls, 2 - Cows (9 guesses left).
+Game "Cows & bulls
 
-2)
-Example input: "Please enter 4 digit number: ":
-                a123
-Example output:
-                "Not valid input, please try again."
+Try to guess 4 different digit number (secret number).
+Start the game by entering 4 digits from 0 to 9.
+If some of your digits will be in the right place of the secret number, you will get Bulls.
+If some of your digits will be in the secret number, but not in the right place, you will get Cows.
+You have 10 guesses! Good luck! :)
+
+i) use do while loop for creating the game:
+  - call the method generateNumber for generating the random number for user to guess;
+  - ask user to enter his/her guess and accept first 4 digits from users input as guess;
+  - if user entered less than 4 or more than 4 digits, output following message and let user guess again:
+
+    Incorrect input. Please enter 4 digits!
+
+  - create an array variable "userNumber" with datatype int;
+  - store each digit from users input into the array "userNumber";
+  - assign a value to "bullsCount" by calling the method "countBulls";
+  - assign a value to "cowsCount" by calling the method "countCows";
+  - store data into the array "table";
+  - subtract by one value to the "userGuessCount";
+  - call the method "printTable";
+  - reset the "userGuessCount" to - 10 after every game;
+  - make sure that after correct guess user gets the following message:
+
+    You won! Congratulations!
+    Do you want to play again?
+    Please answer by entering - "yes" or "no"!
+
+  - and after 10 incorrect guesses this message:
+
+    Sorry you lost! Good luck next time!
+    Do you want to play again?
+    Please answer by entering - "yes" or "no"!
+
+  - if user answers with "yes" (does not matter if lower or upper case letters are used), the game starts again with new random number to guess;
+  - if user answers with "no" (does not matter if lower or upper case letters are used), the program exits;
+  - if user answers with something else than "yes" or "no" (as well as an empty input), the user gets the following message:
+
+    Sorry, could not get your reply!
+    Please type one of two answers - yes or no!
