@@ -63,12 +63,11 @@ public class CowsAndBullsGame {
             if (bullsCount == 4) {
                 System.out.println("You won! Congratulations! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
-                userGuessCount = 10;
             } else {
                 System.out.println("\nSorry you lost! Good luck next time! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
-                userGuessCount = 10;
             }
+            userGuessCount = 10;
 
             playAgain = userInput.nextLine();
 
