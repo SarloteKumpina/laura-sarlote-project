@@ -1,9 +1,6 @@
 # laura-sarlote-project
-Laura and Sarlote project
 
-Description.
-
-Create a game **"Cows and bulls"**:
+#### Create a game **"Cows and bulls"**
 
 1. Create a class "Utils" and:
 
@@ -32,20 +29,20 @@ f) create a variable "playAgain" with datatype String;
 g) create two-dimensional array variable "table" with datatype String;  
 h) print a text for beginning of the game as follows:
 
-    _Game "Cows & bulls"_
+    _**Game "Cows & bulls"**_
 
-    _Try to guess 4 different digit number (secret number).
+    _**Try to guess 4 different digit number (secret number).
 Start the game by entering 4 digits from 0 to 9.
 If some of your digits will be in the right place of the secret number, you will get Bulls.
 If some of your digits will be in the secret number, but not in the right place, you will get Cows.
-You have 10 guesses! Good luck! :)_
+You have 10 guesses! Good luck! :)**_
 
    i) use do while loop for creating the game:
     - call the method generateNumber for generating the random number for user to guess;
     - ask user to enter his/her guess and accept first 4 digits from users input as guess;
     - if user entered less than 4 or more than 4 digits, output following message and let user guess again:
 
-      _Incorrect input. Please enter 4 digits!_
+      _**Incorrect input. Please enter 4 digits!**_
 
     - create an array variable "userNumber" with datatype int;
     - store each digit from users input into the array "userNumber";
@@ -57,15 +54,15 @@ You have 10 guesses! Good luck! :)_
     - reset the "userGuessCount" to 10 after every game;
     - make sure after correct guess user gets the following message:
 
-      _You won! Congratulations!
+      _**You won! Congratulations!
     Do you want to play again?
-    Please answer by entering - "yes" or "no"!_
+    Please answer by entering - "yes" or "no"!**_
 
     - and after 10 incorrect guesses this message:
 
-      _Sorry you lost! Good luck next time!
+      _**Sorry you lost! Good luck next time!
     Do you want to play again?
-    Please answer by entering - "yes" or "no"!_
+    Please answer by entering - "yes" or "no"!**_
 
     - if user answers with "yes" (does not matter if lower or upper case letters are used), the game starts again with new random number to guess;
     - if user answers with "no" (does not matter if lower or upper case letters are used), the program exits;
