@@ -21,6 +21,24 @@ class Utils {
         return myArray;
     }
 
+
+    static int[] generateNumber1(int sizeOfRandom) {
+
+        Random random = new Random();
+        int[] myArray = new int[sizeOfRandom];
+        String memory = "";
+
+        for (int i = 0; i < sizeOfRandom; i++) {
+            int number = random.nextInt(9);
+            while (memory.contains(Integer.toString(number))) {
+                number = random.nextInt(9);
+            }
+            myArray[i] = number;
+            memory += number;
+        }
+        return myArray;
+    }
+
     static int countBulls(int[] userNumber, int[] randomNumber) {
         int bullsCount = 0;
         for (int i = 0; i < userNumber.length; ++i) {
