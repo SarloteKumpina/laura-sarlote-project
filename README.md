@@ -1,6 +1,6 @@
 # laura-sarlote-project
 
-#### Create a game **"Bulls and cows"**
+### Create a game **"Bulls and cows"**
 
 1. Create a class "Utils" and:
 
