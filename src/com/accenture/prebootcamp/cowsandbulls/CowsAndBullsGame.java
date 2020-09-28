@@ -13,7 +13,6 @@ public class CowsAndBullsGame {
         String playAgain;
         String[][] table;
 
-
         System.out.println();
         System.out.println("Game \"Cows & bulls\"\n\n" +
                 "Try to guess 4 different digit number (secret number).\n" +
@@ -72,7 +71,7 @@ public class CowsAndBullsGame {
             playAgain = userInput.nextLine();
 
             while (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no")) {
-                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - yes or no!");
+                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - \"yes\" or \"no\"!");
                 playAgain = userInput.nextLine();
             }
 
