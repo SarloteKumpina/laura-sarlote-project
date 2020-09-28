@@ -1,4 +1,4 @@
-package com.accenture.prebootcamp.cowsandbulls;
+package com.accenture.prebootcamp.bullsandcows;
 
 import java.util.Random;
 

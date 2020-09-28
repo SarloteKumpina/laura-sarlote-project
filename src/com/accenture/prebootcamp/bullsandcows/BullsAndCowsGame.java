@@ -1,8 +1,8 @@
-package com.accenture.prebootcamp.cowsandbulls;
+package com.accenture.prebootcamp.bullsandcows;
 
 import java.util.Scanner;
 
-public class CowsAndBullsGame {
+public class BullsAndCowsGame {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class CowsAndBullsGame {
         String[][] table;
 
         System.out.println();
-        System.out.println("Game \"Cows & bulls\"\n\n" +
+        System.out.println("Game \"Bulls & Cows\"\n\n" +
                 "Try to guess 4 different digit number (secret number).\n" +
                 "Start the game by entering 4 digits from 0 to 9.\n" +
                 "If some of your digits will be in the right place of the secret number, you will get Bulls.\n" +

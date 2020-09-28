@@ -1,6 +1,6 @@
 # laura-sarlote-project
 
-#### Create a game **"Cows and bulls"**
+#### Create a game **"Bulls and cows"**
 
 1. Create a class "Utils" and:
 
@@ -18,7 +18,7 @@ The method should print following (this is just an example for users input and e
     |    1234    |   0   |   3  |       9       |
     |    5678    |   0   |   1  |       8       |
     
-2. Create a class "CowsAndBullsGame" with main method for creating the game and:
+2. Create a class "BullsAndCowsGame" with main method for creating the game and:
 
     a) import Scanner for users input;  
 b) create a variable "numbersOnly" with datatype String;  
@@ -29,12 +29,12 @@ f) create a variable "playAgain" with datatype String;
 g) create two-dimensional array variable "table" with datatype String;  
 h) print a text for beginning of the game as follows:
 
-    _**Game "Cows & bulls"**_
+    _**Game "Bulls & Cows"**_
 
-    _**Try to guess 4 different digit number (secret number).
-Start the game by entering 4 digits from 0 to 9.
-If some of your digits will be in the right place of the secret number, you will get Bulls.
-If some of your digits will be in the secret number, but not in the right place, you will get Cows.
+    _**Try to guess 4 different digit number (secret number).  
+Start the game by entering 4 digits from 0 to 9.  
+If some of your digits will be in the right place of the secret number, you will get Bulls.  
+If some of your digits will be in the secret number, but not in the right place, you will get Cows.  
 You have 10 guesses! Good luck! :)**_
 
    i) use do while loop for creating the game:
@@ -54,19 +54,19 @@ You have 10 guesses! Good luck! :)**_
     - reset the "userGuessCount" to 10 after every game;
     - make sure after correct guess user gets the following message:
 
-      _**You won! Congratulations!
-    Do you want to play again?
+      _**You won! Congratulations!  
+    Do you want to play again?    
     Please answer by entering - "yes" or "no"!**_
 
     - and after 10 incorrect guesses this message:
 
-      _**Sorry you lost! Good luck next time!
-    Do you want to play again?
+      _**Sorry, you lost! Good luck next time!  
+    Do you want to play again?  
     Please answer by entering - "yes" or "no"!**_
 
     - if user answers with "yes" (does not matter if lower or upper case letters are used), the game starts again with new random number to guess;
     - if user answers with "no" (does not matter if lower or upper case letters are used), the program exits;
     - if user answers with something else, then "yes" or "no" (as well as an empty input), the user gets the following message:
   
-      _**Sorry, could not get your reply! 
+      _**Sorry, could not get your reply!   
     Please type one of two answers - "yes" or "no"!**_
