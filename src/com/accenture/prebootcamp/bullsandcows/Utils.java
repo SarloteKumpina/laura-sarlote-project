@@ -22,13 +22,13 @@ class Utils {
     }
 
 
-    static int[] generateNumber1(int sizeOfRandom) {
+    static int[] generateNumber1(int sizeOfNumber) {
 
         Random random = new Random();
-        int[] myArray = new int[sizeOfRandom];
+        int[] myArray = new int[sizeOfNumber];
         String memory = "";
 
-        for (int i = 0; i < sizeOfRandom; i++) {
+        for (int i = 0; i < sizeOfNumber; i++) {
             int number = random.nextInt(9);
             while (memory.contains(Integer.toString(number))) {
                 number = random.nextInt(9);

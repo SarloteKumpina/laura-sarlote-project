@@ -14,6 +14,7 @@ public class BullsAndCowsGame7 {
         int gamesPlayed = 0;
         int gamesWon = 0;
         int gamesLost = 0;
+        int digitChoice;
 
         System.out.println();
         System.out.println("Game \"Bulls & Cows\"\n\n" +
@@ -25,27 +26,33 @@ public class BullsAndCowsGame7 {
                 "You have 10 guesses! Good luck! :)");
 
         do {
-            System.out.print("Enter your choice of how many digit number you want to guess (from 2-8): ");
-            int usersDigitChoice = userInput.nextInt();
-            int[] randomNumber = Utils.generateNumber1(usersDigitChoice);
+            do {
+                System.out.print("Enter your choice of how many digit number you want to guess 4 or 5: ");
+                digitChoice = userInput.nextInt();
+                if (digitChoice < 4 || digitChoice > 5) {
+                    System.out.println("\nIncorrect input. Please enter 4 or 5!");
+                }
+            } while (digitChoice < 4 || digitChoice > 5);
+
+            int[] randomNumber = Utils.generateNumber1(digitChoice);
             System.out.println();
             for (int i = 0; i < randomNumber.length; i++) {
                 System.out.print(randomNumber[i] + " ");
             }
 
-            table = new String[userGuessCount][usersDigitChoice];
+            table = new String[userGuessCount][digitChoice];
             do {
                 do {
                     System.out.print("Your guess: ");
                     String userString = userInput.nextLine();
 
                     numbersOnly = userString.replaceAll("[^0-9]", "");
-                    if (numbersOnly.length() != usersDigitChoice) {
-                        System.out.println("Incorrect input. Please enter " + usersDigitChoice + " digits!");
+                    if (numbersOnly.length() != digitChoice) {
+                        System.out.println("Incorrect input. Please enter " + digitChoice + " digits!");
                     }
-                } while (numbersOnly.length() != usersDigitChoice);
+                } while (numbersOnly.length() != digitChoice);
 
-                int[] userNumber = new int[usersDigitChoice];
+                int[] userNumber = new int[digitChoice];
                 for (int i = 0; i < numbersOnly.length(); i++) {
                     userNumber[i] = Integer.parseInt(numbersOnly.substring(i, i + 1));
                 }
@@ -61,16 +68,16 @@ public class BullsAndCowsGame7 {
                 userGuessCount--;
                 Utils.printTable(table);
 
-            } while (bullsCount != usersDigitChoice && userGuessCount != 0);
+            } while (bullsCount != digitChoice && userGuessCount != 0);
 
-            if (bullsCount == usersDigitChoice) {
-                gamesPlayed++;
+            gamesPlayed++;
+
+            if (bullsCount == digitChoice) {
                 gamesWon++;
                 System.out.println("You won! Congratulations!\nGames played - " + gamesPlayed +
                         "\nGames you won - " + gamesWon + "\nGames you lost - " + gamesLost + "\nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             } else {
-                gamesPlayed++;
                 gamesLost++;
                 System.out.println("Sorry, you lost! Good luck next time!\nGames played - " + gamesPlayed +
                         "\nGames you won - " + gamesWon + "\nGames you lost - " + gamesLost);
