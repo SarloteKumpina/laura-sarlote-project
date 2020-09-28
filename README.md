@@ -15,8 +15,8 @@ The method should print following (this is just an example for users input and e
 
     | Your guess | Bulls | Cows | Attempts left |
     |:----------:|:-----:|:----:|:-------------:|
-    |    1234    |   0   |   3  |       9       |
-    |    5678    |   0   |   1  |       8       |
+    |    1234    |   0   |   2  |       9       |
+    |    5678    |   0   |   2  |       8       |
     
 2. Create a class "BullsAndCowsGame" with main method for creating the game and:
 
@@ -60,7 +60,8 @@ You have 10 guesses! Good luck! :)**_
 
     - and after 10 incorrect guesses this message:
 
-      _**Sorry, you lost! Good luck next time!  
+      _**Sorry, you lost! Good luck next time!
+    The secret number was: 8742  
     Do you want to play again?  
     Please answer by entering - "yes" or "no"!**_
 

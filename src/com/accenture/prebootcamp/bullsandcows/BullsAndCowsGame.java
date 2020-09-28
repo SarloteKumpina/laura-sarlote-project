@@ -25,9 +25,6 @@ class BullsAndCowsGame {
         do {
             int[] randomNumber = Utils.generateNumber();
             System.out.println();
-            for (int i = 0; i < randomNumber.length; i++) {
-                System.out.print(randomNumber[i] + " ");
-            }
             table = new String[userGuessCount][4];
             do {
                 do {
@@ -63,7 +60,12 @@ class BullsAndCowsGame {
                 System.out.println("You won! Congratulations! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             } else {
-                System.out.println("\nSorry, you lost! Good luck next time! \nDo you want to play again? " +
+                System.out.println("\nSorry, you lost! Good luck next time!");
+                System.out.print("The secret number was: ");
+                for (int i = 0; i < randomNumber.length; i++) {
+                    System.out.print(randomNumber[i] + " ");
+                }
+                System.out.println("\nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             }
             userGuessCount = 10;
