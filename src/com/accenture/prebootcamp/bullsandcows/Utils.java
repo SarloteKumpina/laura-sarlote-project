@@ -63,7 +63,7 @@ class Utils {
         return cowsCount;
     }
 
-    // šo būs jādzēš ārā, kad 2 un 3 spēles versija vairs nebūs šājā package
+    // šo būs jādzēš ārā, ja atstāsim TheGame versiju
     static void printTable(String[][] table) {
         System.out.print("+------------+-------+------+---------------+\n" +
                 "| Your guess | Bulls | Cows | Attempts left |\n" +
