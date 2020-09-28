@@ -28,7 +28,6 @@ class BullsAndCowsGame {
             table = new String[userGuessCount][4];
             do {
                 do {
-                    System.out.println();
                     System.out.print("Your guess: ");
                     String userString = userInput.nextLine();
 
