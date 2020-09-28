@@ -60,7 +60,7 @@ You have 10 guesses! Good luck! :)**_
 
     - and after 10 incorrect guesses this message:
 
-      _**Sorry, you lost! Good luck next time!
+      _**Sorry, you lost! Good luck next time!  
     The secret number was: 8742  
     Do you want to play again?  
     Please answer by entering - "yes" or "no"!**_
