@@ -34,6 +34,7 @@ class BullsAndCowsGame2 {
                 }
             } while (userGuessCount != 10 && userGuessCount != 15 && userGuessCount != 20);
 
+            userInput.nextLine();
             int[] randomNumber = Utils.generateNumber();
             System.out.println();
             table = new String[userGuessCount][4];
@@ -56,10 +57,22 @@ class BullsAndCowsGame2 {
                 bullsCount = Utils.countBulls(userNumber, randomNumber);
                 cowsCount = Utils.countCows(userNumber, randomNumber);
 
-                table[10 - userGuessCount][0] = numbersOnly;
-                table[10 - userGuessCount][1] = Integer.toString(bullsCount);
-                table[10 - userGuessCount][2] = Integer.toString(cowsCount);
-                table[10 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
+                if (userGuessCount == 10) {
+                    table[10 - userGuessCount][0] = numbersOnly;
+                    table[10 - userGuessCount][1] = Integer.toString(bullsCount);
+                    table[10 - userGuessCount][2] = Integer.toString(cowsCount);
+                    table[10 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
+                } else if (userGuessCount == 15) {
+                    table[15 - userGuessCount][0] = numbersOnly;
+                    table[15 - userGuessCount][1] = Integer.toString(bullsCount);
+                    table[15 - userGuessCount][2] = Integer.toString(cowsCount);
+                    table[15 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
+                } else {
+                    table[20 - userGuessCount][0] = numbersOnly;
+                    table[20 - userGuessCount][1] = Integer.toString(bullsCount);
+                    table[20 - userGuessCount][2] = Integer.toString(cowsCount);
+                    table[20 - userGuessCount][3] = Integer.toString(userGuessCount - 1);
+                }
 
                 userGuessCount--;
                 Utils.printTable(table);
