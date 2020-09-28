@@ -54,7 +54,7 @@ You have 10 guesses! Good luck! :)_
     - store data into the array "table";
     - subtract by one value to the "userGuessCount";
     - call the method "printTable";
-    - reset the "userGuessCount" to - 10 after every game;
+    - reset the "userGuessCount" to 10 after every game;
     - make sure after correct guess user gets the following message:
 
       _You won! Congratulations!
@@ -71,5 +71,5 @@ You have 10 guesses! Good luck! :)_
     - if user answers with "no" (does not matter if lower or upper case letters are used), the program exits;
     - if user answers with something else, then "yes" or "no" (as well as an empty input), the user gets the following message:
   
-      _Sorry, could not get your reply! 
-    Please type one of two answers - "yes" or "no"!_
+      _**Sorry, could not get your reply! 
+    Please type one of two answers - "yes" or "no"!**_
