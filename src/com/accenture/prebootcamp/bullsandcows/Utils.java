@@ -2,9 +2,9 @@ package com.accenture.prebootcamp.bullsandcows;
 
 import java.util.Random;
 
-public class Utils {
+class Utils {
 
-    public static int[] generateNumber() {
+    static int[] generateNumber() {
 
         Random random = new Random();
         int[] myArray = new int[4];
@@ -21,7 +21,7 @@ public class Utils {
         return myArray;
     }
 
-    public static int countBulls(int[] userNumber, int[] randomNumber) {
+    static int countBulls(int[] userNumber, int[] randomNumber) {
         int bullsCount = 0;
         for (int i = 0; i < userNumber.length; ++i) {
             if (randomNumber[i] == userNumber[i]) {
@@ -31,7 +31,7 @@ public class Utils {
         return bullsCount;
     }
 
-    public static int countCows(int[] userNumber, int[] randomNumber) {
+    static int countCows(int[] userNumber, int[] randomNumber) {
         int cowsCount = 0;
         for (int i = 0; i < userNumber.length; ++i) {
             for (int j = 0; j < randomNumber.length; ++j) {
@@ -43,7 +43,7 @@ public class Utils {
         return cowsCount;
     }
 
-    public static void printTable(String[][] table) {
+    static void printTable(String[][] table) {
         System.out.print("+------------+-------+------+---------------+\n" +
                 "| Your guess | Bulls | Cows | Attempts left |\n" +
                 "+------------+-------+------+---------------+\n");

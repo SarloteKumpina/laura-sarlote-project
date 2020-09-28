@@ -2,7 +2,7 @@ package com.accenture.prebootcamp.bullsandcows;
 
 import java.util.Scanner;
 
-public class BullsAndCowsGame {
+class BullsAndCowsGame {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
