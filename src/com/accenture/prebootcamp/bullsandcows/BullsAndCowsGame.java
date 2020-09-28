@@ -12,6 +12,9 @@ class BullsAndCowsGame {
         int cowsCount;
         String playAgain;
         String[][] table;
+        int gamesPlayed = 0;
+        int gamesWon = 0;
+        int gamesLost = 0;
 
         System.out.println();
         System.out.println("Game \"Bulls & Cows\"\n\n" +
@@ -56,10 +59,16 @@ class BullsAndCowsGame {
             } while (bullsCount != 4 && userGuessCount != 0);
 
             if (bullsCount == 4) {
-                System.out.println("You won! Congratulations! \nDo you want to play again? " +
+                gamesPlayed++;
+                gamesWon++;
+                System.out.println("You won! Congratulations!\nGames played - " + gamesPlayed +
+                        "\nGames you won - " + gamesWon + "\nGames you lost - " + gamesLost + "\nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             } else {
-                System.out.println("\nSorry, you lost! Good luck next time!");
+                gamesPlayed++;
+                gamesLost++;
+                System.out.println("Sorry, you lost! Good luck next time!\nGames played - " + gamesPlayed +
+                                "\nGames you won - " + gamesWon + "\nGames you lost - " + gamesLost);
                 System.out.print("The secret number was: ");
                 for (int i = 0; i < randomNumber.length; i++) {
                     System.out.print(randomNumber[i] + " ");
