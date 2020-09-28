@@ -63,7 +63,7 @@ public class BullsAndCowsGame {
                 System.out.println("You won! Congratulations! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             } else {
-                System.out.println("\nSorry you lost! Good luck next time! \nDo you want to play again? " +
+                System.out.println("\nSorry, you lost! Good luck next time! \nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             }
             userGuessCount = 10;
