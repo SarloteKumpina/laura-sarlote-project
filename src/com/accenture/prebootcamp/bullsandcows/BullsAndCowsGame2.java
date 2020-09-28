@@ -34,8 +34,7 @@ class BullsAndCowsGame2 {
                 }
             } while (userGuessCount != 10 && userGuessCount != 15 && userGuessCount != 20);
 
-            userInput.nextLine();
-            int[] randomNumber = Utils.generateNumber();
+            int[] randomNumber = Utils.generateNumber1();
             System.out.println();
             table = new String[userGuessCount][4];
             do {

@@ -2,7 +2,7 @@ package com.accenture.prebootcamp.bullsandcows;
 
 import java.util.Scanner;
 
-public class BullsAndCowsGame7 {
+public class BullsAndCowsGame3 {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         String numbersOnly;
@@ -34,7 +34,7 @@ public class BullsAndCowsGame7 {
                 }
             } while (digitChoice < 4 || digitChoice > 5);
 
-            int[] randomNumber = Utils.generateNumber1(digitChoice);
+            int[] randomNumber = Utils.generateNumber(digitChoice);
             System.out.println();
             for (int i = 0; i < randomNumber.length; i++) {
                 System.out.print(randomNumber[i] + " ");
