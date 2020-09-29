@@ -4,6 +4,26 @@ import java.util.Random;
 
 class Utils {
 
+
+    // šo būs jādzēš ārā, kad 2 un 3 spēles versija vairs nebūs šājā package
+    static int[] generateNumber1() {
+
+        Random random = new Random();
+        int[] myArray = new int[4];
+        String memory = "";
+
+        for (int i = 0; i < 4; i++) {
+            int number = random.nextInt(9);
+            while (memory.contains(Integer.toString(number))) {
+                number = random.nextInt(9);
+            }
+            myArray[i] = number;
+            memory += number;
+        }
+        return myArray;
+    }
+
+
     static int[] generateNumber(int sizeOfNumber) {
 
         Random random = new Random();
@@ -41,6 +61,24 @@ class Utils {
             }
         }
         return cowsCount;
+    }
+
+    // šo būs jādzēš ārā, ja atstāsim TheGame versiju
+    static void printTable(String[][] table) {
+        System.out.print("+------------+-------+------+---------------+\n" +
+                "| Your guess | Bulls | Cows | Attempts left |\n" +
+                "+------------+-------+------+---------------+\n");
+
+        for (int i = 0; i < table.length; i++) {
+            if (table[i][0] == null) {
+                return;
+            }
+            System.out.print("|    " + table[i][0] + "    " +
+                    "|   " + table[i][1] + "   |  " +
+                    table[i][2] + "   |       " +
+                    table[i][3] + "       |\n" +
+                    "+------------+-------+------+---------------+\n");
+        }
     }
 
     static void printTableFourDigits(String[][] table) {
