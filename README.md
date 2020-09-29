@@ -26,7 +26,7 @@ The method should print following (this is just an example for users input and e
 |    1234    |   0   |   3  |       9       |
 |    5678    |   0   |   1  |       8       |
 
-2. Create a class "CowsAndBullsGame" with main method for creating the game and:   
+###### **2. Create a class "CowsAndBullsGame" with main method for creating the game and:**
    
 a) import Scanner for users input;
     
