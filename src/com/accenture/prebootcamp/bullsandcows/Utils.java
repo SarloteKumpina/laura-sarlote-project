@@ -43,39 +43,39 @@ class Utils {
         return cowsCount;
     }
 
-    static void printTableFourDigits(String[][] table) {
-        System.out.print("-------------+-------+------+----------------\n" +
-                "  Your guess | Bulls | Cows | Attempts left  \n" +
-                "-------------+-------+------+----------------\n");
-
-        for (int i = 0; i < table.length; i++) {
-            if (table[i][0] == null) {
-                return;
-            }
-            System.out.print("     " + table[i][0] + "    " +
-                    "|   " + table[i][1] + "   |  " +
-                    table[i][2] + "   |       " +
-                    table[i][3] + "        \n" +
-                    "-------------+-------+------+----------------\n");
-        }
-    }
-
-    static void printTableFiveDigits(String[][] table) {
-        System.out.print("-------------+-------+------+----------------\n" +
-                "  Your guess | Bulls | Cows | Attempts left  \n" +
-                "-------------+-------+------+----------------\n");
-
-        for (int i = 0; i < table.length; i++) {
-            if (table[i][0] == null) {
-                return;
-            }
-            System.out.print("     " + table[i][0] + "   " +
-                    "|   " + table[i][1] + "   |  " +
-                    table[i][2] + "   |       " +
-                    table[i][3] + "        \n" +
-                    "-------------+-------+------+----------------\n");
-        }
-    }
+//    static void printTableFourDigits(String[][] table) {
+//        System.out.print("-------------+-------+------+----------------\n" +
+//                "  Your guess | Bulls | Cows | Attempts left  \n" +
+//                "-------------+-------+------+----------------\n");
+//
+//        for (int i = 0; i < table.length; i++) {
+//            if (table[i][0] == null) {
+//                return;
+//            }
+//            System.out.print("     " + table[i][0] + "    " +
+//                    "|   " + table[i][1] + "   |  " +
+//                    table[i][2] + "   |       " +
+//                    table[i][3] + "        \n" +
+//                    "-------------+-------+------+----------------\n");
+//        }
+//    }
+//
+//    static void printTableFiveDigits(String[][] table) {
+//        System.out.print("-------------+-------+------+----------------\n" +
+//                "  Your guess | Bulls | Cows | Attempts left  \n" +
+//                "-------------+-------+------+----------------\n");
+//
+//        for (int i = 0; i < table.length; i++) {
+//            if (table[i][0] == null) {
+//                return;
+//            }
+//            System.out.print("     " + table[i][0] + "   " +
+//                    "|   " + table[i][1] + "   |  " +
+//                    table[i][2] + "   |       " +
+//                    table[i][3] + "        \n" +
+//                    "-------------+-------+------+----------------\n");
+//        }
+//    }
 
     static void printTable(String[][] table, int digitChoice) {
         System.out.print("-------------+-------+------+----------------\n" +
@@ -92,19 +92,20 @@ class Utils {
                         table[i][2] + "   |       " +
                         table[i][3] + "        \n" +
                         "-------------+-------+------+----------------\n");
-            } }else {
-                for (int i = 0; i < table.length; i++) {
-                    if (table[i][0] == null) {
-                        return;
-                    }
-                    System.out.print("     " + table[i][0] + "   " +
-                            "|   " + table[i][1] + "   |  " +
-                            table[i][2] + "   |       " +
-                            table[i][3] + "        \n" +
-                            "-------------+-------+------+----------------\n");
+            }
+        } else {
+            for (int i = 0; i < table.length; i++) {
+                if (table[i][0] == null) {
+                    return;
                 }
+                System.out.print("     " + table[i][0] + "    " +
+                        "|   " + table[i][1] + "   |  " +
+                        table[i][2] + "   |       " +
+                        table[i][3] + "        \n" +
+                        "-------------+-------+------+----------------\n");
             }
         }
     }
+}
 
 
