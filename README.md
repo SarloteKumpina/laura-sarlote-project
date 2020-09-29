@@ -2,7 +2,7 @@
 
 ### Create a game **"Bulls and cows"**
 
-1.  Create a class "Utils" and: 
+**1. Create a class "Utils" and:** 
 
 a) create a method "generateNumber" which generates random number with 4 or 5 digits (according to users choice) where each digit is different. The method must return int array;
        
@@ -26,7 +26,7 @@ The method should print following (this is just an example for users input and e
 |    1234    |   0   |   3  |       9       |
 |    5678    |   0   |   1  |       8       |
 
-###### **2. Create a class "CowsAndBullsGame" with main method for creating the game and:**
+**2. Create a class "CowsAndBullsGame" with main method for creating the game and:**
    
 a) import Scanner for users input;
     
