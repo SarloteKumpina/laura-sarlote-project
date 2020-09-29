@@ -27,11 +27,11 @@ public class TheGame {
                 "Start the game by entering 4 or 5 digits (according to your choice) from 0 to 9.\n" +
                 "If some of your digits will be in the right place of the secret number, you will get Bulls.\n" +
                 "If some of your digits will be in the secret number, but not in the right place, you will get Cows.\n" +
-                "Good luck! :)\n\n");
+                "Good luck! :)");
 
         do {
             do {
-                System.out.print("Please enter how many digit number you want to guess - 4 or 5: ");
+                System.out.print("\nPlease enter how many digit number you want to guess - 4 or 5: ");
                 digitChoice = userInput.nextInt();
                 if (digitChoice < 4 || digitChoice > 5) {
                     System.out.println("\nIncorrect input. Please enter - 4 or 5!");
@@ -105,14 +105,13 @@ public class TheGame {
                     Utils.printTableFiveDigits(table);
                 }
 
-
             } while (bullsCount != digitChoice && userGuessCountTen != 0 && userGuessCountFifteen != 0 && userGuessCountTwenty != 0);
 
             gamesPlayed++;
             if (bullsCount == digitChoice) {
                 gamesWon++;
                 System.out.println("\nYou won! Congratulations!\n\nGames played: " + gamesPlayed +
-                        "\n - games you won: " + gamesWon + "\n - games you lost: " + gamesLost +
+                        "\n- games you won: " + gamesWon + "\n- games you lost: " + gamesLost +
                         "\n\nDo you want to play again? " +
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             } else {
@@ -123,11 +122,8 @@ public class TheGame {
                     System.out.print(randomNumber[i] + " ");
                 }
                 System.out.println("\n\nGames played: " + gamesPlayed +
-                        "\n - games you won: " + gamesWon + "\n - games you lost: " + gamesLost);
-
-
-                System.out.println("\nDo you want to play again? " +
-                        "\nPlease answer by entering - \"yes\" or \"no\"!");
+                        "\n- games you won: " + gamesWon + "\n- games you lost: " + gamesLost +
+                        "\n\nDo you want to play again?\nPlease answer by entering - \"yes\" or \"no\"!");
             }
 
             userGuessCountTen = 10;
@@ -137,7 +133,7 @@ public class TheGame {
             playAgain = userInput.nextLine();
 
             while (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no")) {
-                System.out.println("Sorry, could not get your reply! \nPlease type one of two answers - \"yes\" or \"no\"!");
+                System.out.println("Sorry, could not get your reply!\nPlease type one of two answers - \"yes\" or \"no\"!");
                 playAgain = userInput.nextLine();
             }
 

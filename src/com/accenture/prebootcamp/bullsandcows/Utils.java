@@ -4,7 +4,6 @@ import java.util.Random;
 
 class Utils {
 
-
     // šo būs jādzēš ārā, kad 2 un 3 spēles versija vairs nebūs šājā package
     static int[] generateNumber1() {
 
@@ -22,7 +21,6 @@ class Utils {
         }
         return myArray;
     }
-
 
     static int[] generateNumber(int sizeOfNumber) {
 
@@ -114,5 +112,4 @@ class Utils {
                     "-------------+-------+------+----------------\n");
         }
     }
-
 }
