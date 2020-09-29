@@ -93,13 +93,14 @@ public class BullsAndCowsGame {
                     userGuessCountTen--;
                 }
 
-                if (digitChoice == 4) {
-                    Utils.printTableFourDigits(table);
-                }
-
-                if (digitChoice == 5) {
-                    Utils.printTableFiveDigits(table);
-                }
+//                if (digitChoice == 4) {
+//                    Utils.printTableFourDigits(table);
+//                }
+//
+//                if (digitChoice == 5) {
+//                    Utils.printTableFiveDigits(table);
+//                }
+                Utils.printTable(table, digitChoice);
 
             } while (bullsCount != digitChoice && userGuessCountTen != 0 && userGuessCountFifteen != 0 && userGuessCountTwenty != 0);
 

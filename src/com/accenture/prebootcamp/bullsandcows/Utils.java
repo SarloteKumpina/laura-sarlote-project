@@ -76,4 +76,35 @@ class Utils {
                     "-------------+-------+------+----------------\n");
         }
     }
-}
+
+    static void printTable(String[][] table, int digitChoice) {
+        System.out.print("-------------+-------+------+----------------\n" +
+                "  Your guess | Bulls | Cows | Attempts left  \n" +
+                "-------------+-------+------+----------------\n");
+
+        if (digitChoice == 5) {
+            for (int i = 0; i < table.length; i++) {
+                if (table[i][0] == null) {
+                    return;
+                }
+                System.out.print("     " + table[i][0] + "   " +
+                        "|   " + table[i][1] + "   |  " +
+                        table[i][2] + "   |       " +
+                        table[i][3] + "        \n" +
+                        "-------------+-------+------+----------------\n");
+            } }else {
+                for (int i = 0; i < table.length; i++) {
+                    if (table[i][0] == null) {
+                        return;
+                    }
+                    System.out.print("     " + table[i][0] + "   " +
+                            "|   " + table[i][1] + "   |  " +
+                            table[i][2] + "   |       " +
+                            table[i][3] + "        \n" +
+                            "-------------+-------+------+----------------\n");
+                }
+            }
+        }
+    }
+
+
