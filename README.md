@@ -10,16 +10,15 @@ b) create a method "countBulls" which counts all digits that are placed in the r
    
 c) create a method "countCows" which counts all digits that are somewhere in the random number, but are not in the right place. The method must return int;  
    
-d) create a method "printTableFourDigits" which prints a new table after every valid guess input with 4 digits including all the previous guesses.  
-The method should print following (this is just an example for users input and expected outcome for Bulls and Cows count if user chose to have 10 guesses):  
+d) create a method "printTable" which prints a new table after every valid guess input with 4 or 5 digits including all the previous guesses.  
+The method should print following (this is just an example for users input and expected outcome for Bulls and Cows count if user chose to have  4 digits and 10 guesses):  
 
 | Your guess | Bulls | Cows | Attempts left |  
 |:----------:|:-----:|:----:|:-------------:|
 |    1234    |   0   |   3  |       9       |
 |    5678    |   0   |   1  |       8       |
-
-e) create a method "printTableFiveDigits" which prints a new table after every valid guess input with 5 digits including all the previous guesses.    
-The method should print following (this is just an example for users input and expected outcome for Bulls and Cows count if user chose to have 20 guesses):
+   
+Or the method should print following (this is just an example for users input and expected outcome for Bulls and Cows count if user chose to have 5 digits and 20 guesses):
 
 | Your guess | Bulls | Cows | Attempts left |
 |:----------:|:-----:|:----:|:-------------:|
@@ -50,7 +49,7 @@ c) print a text for beginning of the game as follows:
 **_Game "Bulls & Cows"_**
 
 **_Try to guess the secret number where each digit is different!_**
-**_First - choose between 4 or 5 digit number to guess._**
+**_First - choose between 4 or 5 digits number to guess._**
 **_Second - choose between 10, 15 or 20 guesses._**
 **_Start the game by entering 4 or 5 digits (according to your choice) from 0 to 9._**
 **_If some of your digits will be in the right place of the secret number, you will get Bulls._**
@@ -58,7 +57,7 @@ c) print a text for beginning of the game as follows:
 **_Good luck! :)_**
 
 d) use do while loop for creating the game:
-   - ask user to choose between 4 or 5 digit number to guess;
+   - ask user to choose between 4 or 5 digits number to guess;
    - if user entered something else than 4 or 5, output following message and let user answer again:
       
 **_Incorrect input. Please enter - 4 or 5!_** 
@@ -85,7 +84,7 @@ d) use do while loop for creating the game:
    - assign a value to "cowsCount" by calling the method "countCows";
    - store data into the array "table", use variables "UserGuessCountTen", "UserGuessCountFifteen" and "UserGuessCountTwenty";
    - subtract by one value from "UserGuessCountTen", "UserGuessCountFifteen" or "UserGuessCountTwenty";
-   - call the method "printTableFourDigits" or "printTableFiveDigits";
+   - call the method "printTable";
    - reset the "userGuessCountTen" to - 10 after every game;
    - reset the "userGuessCountFifteen" to - 15 after every game;
    - reset the "userGuessCountTwenty" to - 20 after every game;
