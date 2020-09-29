@@ -23,8 +23,8 @@ The method should print following (this is just an example for users input and e
 
 | Your guess | Bulls | Cows | Attempts left |
 |:----------:|:-----:|:----:|:-------------:|
-|    1234    |   0   |   3  |       9       |
-|    5678    |   0   |   1  |       8       |
+|    01234   |   0   |   3  |       19      |
+|    56789   |   1   |   1  |       18      |
 
 **2. Create a class "CowsAndBullsGame" with main method for creating the game and:**
    
