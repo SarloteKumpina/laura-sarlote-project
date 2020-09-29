@@ -32,9 +32,7 @@ a) import Scanner for users input;
 b) create the variables:  
    - "numbersOnly" with datatype String;   
    - "userGuessCount" with datatype int;
-   - "userGuessCountTen" with datatype int and assign value - 10 to it;
-   - "userGuessCountFifteen" with datatype int and assign value - 15 to it;
-   - "userGuessCountTwenty" with datatype int and assign value - 20 to it;
+   - "userGuessCountStatic" with datatype int;
    - "bullsCount" with datatype int;
    - "cowsCount" with datatype int;
    - "playAgain" with datatype String;
@@ -62,7 +60,8 @@ d) use do while loop for creating the game:
       
 **_Incorrect input. Please enter - 4 or 5!_** 
  
-   - ask user to choose between 10, 15  or 20 guesses to have;    
+   - ask user to choose between 10, 15  or 20 guesses to have;
+   - assign this user choice value to "userGuessCountStatic" variable;    
    - if user entered something else than 10, 15 or 20, output following message and let user answer again:
 
 **_Incorrect input. Please enter - 10, 15 or 20!_**
@@ -82,12 +81,9 @@ d) use do while loop for creating the game:
    - store each digit from users input into the array "userNumber";
    - assign a value to "bullsCount" by calling the method "countBulls";
    - assign a value to "cowsCount" by calling the method "countCows";
-   - store data into the array "table", use variables "UserGuessCountTen", "UserGuessCountFifteen" and "UserGuessCountTwenty";
-   - subtract by one value from "UserGuessCountTen", "UserGuessCountFifteen" or "UserGuessCountTwenty";
+   - store data into the array "table", use variables "UserGuessCountStatic" and "UserGuessCount";
    - call the method "printTable";
-   - reset the "userGuessCountTen" to - 10 after every game;
-   - reset the "userGuessCountFifteen" to - 15 after every game;
-   - reset the "userGuessCountTwenty" to - 20 after every game;
+   - reset all the user inputs after every game;
    - count played games and include information about how many games the user won and how many lost;
    - make sure that after correct guess user gets the following message:
 
