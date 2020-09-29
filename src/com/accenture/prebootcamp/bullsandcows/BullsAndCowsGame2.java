@@ -8,9 +8,9 @@ public class BullsAndCowsGame2 {
         String numbersOnly;
         int userGuessCount;
         int userGuessCountStatic;
-//        int userGuessCountTen = 10;
-//        int userGuessCountFifteen = 15;
-//        int userGuessCountTwenty = 20;
+        int userGuessCountTen = 10;
+        int userGuessCountFifteen = 15;
+        int userGuessCountTwenty = 20;
         int bullsCount;
         int cowsCount;
         String playAgain;
@@ -110,9 +110,7 @@ public class BullsAndCowsGame2 {
 //                }
                 Utils.printTable(table, digitChoice);
 
-            } while (bullsCount != digitChoice && userGuessCount != 0);
-
-//            while (bullsCount != digitChoice && userGuessCountTen != 0 && userGuessCountFifteen != 0 && userGuessCountTwenty != 0);
+            } while (bullsCount != digitChoice && userGuessCountTen != 0 && userGuessCountFifteen != 0 && userGuessCountTwenty != 0);
 
             gamesPlayed++;
             if (bullsCount == digitChoice) {
@@ -136,10 +134,9 @@ public class BullsAndCowsGame2 {
                         "\nPlease answer by entering - \"yes\" or \"no\"!");
             }
 
-            userInput.reset();
-//            userGuessCountTen = 10;
-//            userGuessCountFifteen = 15;
-//            userGuessCountTwenty = 20;
+            userGuessCountTen = 10;
+            userGuessCountFifteen = 15;
+            userGuessCountTwenty = 20;
 
             playAgain = userInput.nextLine();
 

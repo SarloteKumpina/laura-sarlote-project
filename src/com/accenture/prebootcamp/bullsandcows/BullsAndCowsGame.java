@@ -93,6 +93,8 @@ public class BullsAndCowsGame {
                     userGuessCountTen--;
                 }
 
+
+
 //                if (digitChoice == 4) {
 //                    Utils.printTableFourDigits(table);
 //                }
